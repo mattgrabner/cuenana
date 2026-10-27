@@ -6,7 +6,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
 app.use(express.json());
 
-app.get('/api/health', (_req, res) => res.json({ ok: true, service: 'cuelance' }));
+app.get('/api/health', (_req, res) => res.json({ ok: true, service: 'cuenana' }));
 app.post('/api/transcription/session', (_req, res) => {
   if (!process.env.OPENAI_API_KEY) {
     return res.status(503).json({ error: 'Transcription is not configured on this server.' });
@@ -19,4 +19,4 @@ app.use(express.static(dist));
 app.use((_req, res) => res.sendFile(path.join(dist, 'index.html')));
 
 const port = process.env.PORT || 8787;
-app.listen(port, () => console.log(`Cuelance server listening on http://localhost:${port}`));
+app.listen(port, () => console.log(`Cuenana server listening on http://localhost:${port}`));

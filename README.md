@@ -1,8 +1,8 @@
-# Cuelance
+# Cuenana
 
 > A calm, local-first teleprompter for natural talking-head videos.
 
-Cuelance keeps your script close to the lens while you speak. The prompt follows your voice, highlights the current word, and stays easy to correct when you pause, improvise, repeat yourself, or skip ahead.
+Cuenana keeps your script close to the lens while you speak. The prompt follows your voice, highlights the current word, and stays easy to correct when you pause, improvise, repeat yourself, or skip ahead.
 
 Made with 💛 in Vienna by [Matthias Grabner](mailto:hello@grabner.tech).
 
@@ -34,7 +34,7 @@ Camera and microphone access on iPhone requires HTTPS. Start Vite, then create a
 npx localtunnel --port 4173
 ```
 
-Open the generated `https://…loca.lt` URL in iPhone Safari and allow Camera and Microphone when prompted. The plain `http://192.168.x.x:4173` LAN URL is useful for layout checks, but Safari will block camera access there. If native fullscreen is unavailable, Cuelance switches to an in-page viewport fullscreen mode with its own controls.
+Open the generated `https://…loca.lt` URL in iPhone Safari and allow Camera and Microphone when prompted. The plain `http://192.168.x.x:4173` LAN URL is useful for layout checks, but Safari will block camera access there. If native fullscreen is unavailable, Cuenana switches to an in-page viewport fullscreen mode with its own controls.
 
 For the production-style Node server:
 
@@ -49,7 +49,7 @@ The server listens on `http://localhost:8787` by default.
 
 The UI includes a local-only OpenAI key field and status indicator. The key is stored in this browser and is never bundled into the frontend. The server-side session route is scaffolded at `POST /api/transcription/session`; wire the OpenAI ephemeral WebRTC exchange there before enabling hosted transcription.
 
-Until that connection is completed, Cuelance uses browser speech recognition where supported and a local demo-following fallback otherwise.
+Until that connection is completed, Cuenana uses browser speech recognition where supported and a local demo-following fallback otherwise.
 
 ## Privacy
 
